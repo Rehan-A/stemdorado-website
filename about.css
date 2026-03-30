@@ -322,14 +322,14 @@
 
 /* ===== MISSION SECTION ===== */
 .mission-section {
-  padding: 100px 0;
+  padding: 2rem 0;
   background: var(--light);
 }
 
 .mission-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .mission-card {
@@ -412,7 +412,7 @@
    ================================================================ */
 
 .what-we-do-section {
-  padding: 100px 0;
+  padding: 3rem 0;
   background: #fff;
 }
 
@@ -941,7 +941,7 @@
   }
 
   .founder-section {
-    padding: 50px 0 60px;
+    padding: 2rem 0 1rem;
   }
 
   .founder-greeting {
@@ -1030,7 +1030,7 @@
    ================================================================ */
 
 .team-section {
-  padding: 100px 0;
+  padding: 2rem 0;
   background: var(--light);
 }
 
