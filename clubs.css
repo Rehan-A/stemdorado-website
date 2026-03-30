@@ -1,0 +1,744 @@
+/* ================================================================
+   AFTER-SCHOOL CLUBS PAGE — STYLES
+   ================================================================ */
+
+/* ===== PAGE HERO ===== */
+.clubs-hero {
+  position: relative;
+  padding: 160px 0 120px;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--darker) 0%, var(--dark) 40%, var(--secondary) 100%);
+  text-align: center;
+}
+
+.clubs-hero-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(0, 180, 216, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(247, 127, 0, 0.2) 0%, transparent 40%);
+}
+
+.clubs-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.clubs-hero .breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.clubs-hero .breadcrumb a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: var(--transition);
+}
+
+.clubs-hero .breadcrumb a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.clubs-hero .breadcrumb i {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.6rem;
+}
+
+.clubs-hero .breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+.clubs-hero h1 {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.clubs-hero h1 .highlight {
+  background: linear-gradient(135deg, var(--primary-light), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.clubs-hero > .container > p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+  animation: fadeInUp 0.6s ease-out 0.15s both;
+}
+
+.hero-stats-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.stat-item i {
+  color: var(--primary-light);
+  font-size: 1.1rem;
+}
+
+.stat-item strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.clubs-hero-wave {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.clubs-hero-wave svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== INTRO SECTION ===== */
+.clubs-intro {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.intro-image {
+  position: relative;
+}
+
+.intro-image img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.intro-badge {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+}
+
+.intro-badge i {
+  color: var(--accent-light);
+}
+
+.intro-text h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.intro-text p strong {
+  color: var(--dark);
+}
+
+.intro-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.intro-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.intro-feature i {
+  color: var(--success, #10b981);
+  font-size: 0.9rem;
+}
+
+/* ===== SCHOOLS SECTION ===== */
+.schools-section {
+  padding: 80px 0 100px;
+  background: var(--light);
+}
+
+.schools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.school-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.school-card:hover {
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.school-card.featured {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, rgba(247, 127, 0, 0.02), rgba(247, 127, 0, 0.05));
+}
+
+.school-card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--accent);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.school-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+}
+
+.school-card:hover .school-card-icon {
+  transform: scale(1.1);
+}
+
+.school-card.featured .school-card-icon {
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+}
+
+.school-card-content {
+  flex: 1;
+}
+
+.school-card-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--dark);
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.school-location {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.school-location i {
+  font-size: 0.75rem;
+  color: var(--primary);
+}
+
+.school-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.school-status.available {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success, #10b981);
+}
+
+.school-status.available i {
+  font-size: 0.5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.school-status.contact {
+  background: rgba(0, 119, 182, 0.1);
+  color: var(--primary);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.school-card-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+.school-card:hover .school-card-action {
+  color: var(--primary-dark);
+}
+
+.school-card-action i {
+  transition: var(--transition);
+}
+
+.school-card:hover .school-card-action i {
+  transform: translateX(4px);
+}
+
+/* Coming Soon Banner */
+.coming-soon-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: linear-gradient(135deg, var(--dark), var(--secondary));
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.5rem;
+  flex-wrap: wrap;
+}
+
+.coming-soon-content {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.coming-soon-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 50%;
+  background: rgba(247, 127, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+
+.coming-soon-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.coming-soon-content p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 24px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+/* ===== HOW IT WORKS ===== */
+.how-it-works {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.steps-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  flex: 1;
+  min-width: 220px;
+  max-width: 280px;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--primary);
+  opacity: 0.08;
+  line-height: 1;
+}
+
+.step-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 0 auto 1.25rem;
+  transition: var(--transition);
+}
+
+.step-card:hover .step-icon {
+  transform: scale(1.1);
+}
+
+.step-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.step-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 64px;
+  color: var(--border);
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+/* ===== FAQ SECTION ===== */
+.faq-section {
+  padding: 80px 0;
+  background: var(--light);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow);
+  border-color: rgba(0, 119, 182, 0.15);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq-question i {
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.faq-question h4 {
+  font-size: 1rem;
+  color: var(--dark);
+  margin: 0;
+}
+
+.faq-item p {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 1.75rem;
+}
+
+.faq-cta {
+  text-align: center;
+}
+
+.faq-cta p {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+/* ===== CTA SECTION ===== */
+.clubs-cta {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.clubs-cta .cta-card {
+  background: linear-gradient(145deg, var(--dark) 0%, var(--secondary) 100%);
+  border-radius: var(--radius-xl);
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.clubs-cta .cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.clubs-cta .cta-card h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.clubs-cta .cta-card p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.clubs-cta .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+.clubs-cta .cta-decoration {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.04);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .intro-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .coming-soon-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .coming-soon-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .clubs-cta .cta-card {
+    padding: 3rem;
+  }
+
+  .clubs-cta .cta-decoration {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .clubs-hero {
+    padding: 120px 0 80px;
+  }
+
+  .clubs-hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-stats-inline {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .clubs-intro,
+  .how-it-works,
+  .faq-section,
+  .clubs-cta {
+    padding: 60px 0;
+  }
+
+  .schools-section {
+    padding: 60px 0 80px;
+  }
+
+  .intro-features {
+    grid-template-columns: 1fr;
+  }
+
+  .schools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step-connector {
+    display: none;
+  }
+
+  .steps-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step-card {
+    max-width: 100%;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clubs-cta .cta-card {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .clubs-cta .cta-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .clubs-hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .intro-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .coming-soon-banner {
+    padding: 1.5rem;
+  }
+
+  .clubs-cta .cta-buttons {
+    flex-direction: column;
+  }
+
+  .clubs-cta .cta-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

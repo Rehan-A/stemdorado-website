@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEM Dorado | Interactive STEM Learning for Children</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAVBAR ===================== -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-stem">STEM</span> Dorado
+        <span class="logo-tagline">Explore · Discover · Learn · Invent · Grow</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <!-- <li><a href="#services" class="nav-link">Services</a></li> -->
+          <li><a href="clubs.html" class="nav-link">After-School Clubs</a></li>
+          <li><a href="magazine.html" class="nav-link">STEM Dorado Science</a></li>
+          <li><a href="news.html" class="nav-link">News</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#register" class="btn btn-register-header">Register</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== 1. HERO BANNER ===================== -->
+  <section class="hero" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-flask"></i>
+          Scientist-Led Learning
+        </div>
+        <h1 class="hero-title">
+          Interactive STEM learning that helps children develop
+          <span class="highlight">life-changing skills</span>
+        </h1>
+        <p class="hero-description">
+          Hands-on workshops, after-school science clubs and a dedicated science magazine — 
+          inspiring curiosity in children aged 5–11 across North London.
+        </p>
+        <div class="hero-cta">
+          <a href="#programs" class="btn btn-primary btn-lg">
+            Explore Programs
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#video" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-play-circle"></i>
+            Watch Video
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span>Google Reviews</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>5+</strong>
+            <span>Partner Schools</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>UCL</strong>
+            <span>Workshop Partner</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-wrapper">
+          <img src="images\banner image.png"
+               alt="Dr Alina Chakraborty teaching children in a science lab" 
+               loading="eager">
+          <div class="hero-image-decoration"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,60 L1440,120 L0,120 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===================== 2. PROGRAMS / MEMBERSHIP CARDS ===================== -->
+  <section class="programs" id="programs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Programs & Membership</span>
+        <h2 class="section-title">Choose Your Path to Discovery</h2>
+        <p class="section-subtitle">Join hundreds of families already exploring STEM with us</p>
+      </div>
+
+      <div class="programs-grid">
+        <!-- Card 1: Free Membership -->
+        <div class="program-card">
+          <div class="program-card-header free">
+            <div class="program-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <span class="program-badge">Free</span>
+          </div>
+          <div class="program-card-body">
+            <h3>Club STEM Dorado</h3>
+            <p class="program-age">Ages 5 – 11</p>
+            <p class="program-desc">
+              Get started with free weekly maths-science activities, bi-monthly magazines, 
+              online workshops, and become part of our growing community.
+            </p>
+            <ul class="program-features">
+              <li><i class="fas fa-check"></i> Weekly activity emails</li>
+              <li><i class="fas fa-check"></i> Science magazine every 2 months</li>
+              <li><i class="fas fa-check"></i> Online workshops</li>
+              <li><i class="fas fa-check"></i> Community access</li>
+            </ul>
+          </div>
+          <div class="program-card-footer">
+            <a href="#" class="btn btn-primary btn-block">Register Free</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Annual Subscription -->
+        <div class="program-card featured">
+          <div class="program-card-ribbon">Most Popular</div>
+          <div class="program-card-header subscription">
+            <div class="program-icon">
+              <i class="fas fa-book-open"></i>
+            </div>
+          </div>
+          <div class="program-card-body">
+            <h3>STEM Dorado Science — Print</h3>
+            <p class="program-age">Annual Subscription</p>
+            <p class="program-desc">
+              Receive our beautifully designed science magazine delivered to your door — 
+              packed with experiments, interviews with real scientists, puzzles, and more.
+            </p>
+            <ul class="program-features">
+              <li><i class="fas fa-check"></i> 6 printed issues per year</li>
+              <li><i class="fas fa-check"></i> Exclusive experiments</li>
+              <li><i class="fas fa-check"></i> Scientist interviews</li>
+              <li><i class="fas fa-check"></i> Puzzles & fun facts</li>
+            </ul>
+          </div>
+          <div class="program-card-footer">
+            <a href="#" class="btn btn-primary btn-block">Subscribe Now</a>
+          </div>
+        </div>
+
+        <!-- Card 3: UCL Workshop -->
+        <div class="program-card">
+          <div class="program-card-header workshop">
+            <div class="program-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <span class="program-badge new">New</span>
+          </div>
+          <div class="program-card-body">
+            <h3>Healthcare Engineering Workshop</h3>
+            <p class="program-age">KS3 Pupils · With IHE-UCL</p>
+            <p class="program-desc">
+              A unique collaboration with UCL's Institute of Healthcare Engineering. 
+              Students explore real-world healthcare engineering challenges through 
+              hands-on activities.
+            </p>
+            <ul class="program-features">
+              <li><i class="fas fa-check"></i> UCL partnership</li>
+              <li><i class="fas fa-check"></i> Hands-on engineering</li>
+              <li><i class="fas fa-check"></i> Healthcare focus</li>
+              <li><i class="fas fa-check"></i> Certificate included</li>
+            </ul>
+          </div>
+          <div class="program-card-footer">
+            <a href="#" class="btn btn-primary btn-block">Register Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3. VIDEO SECTION ===================== -->
+  <section class="video-section" id="video">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">See Us In Action</span>
+        <h2 class="section-title">What Makes STEM Dorado Special</h2>
+        <p class="section-subtitle">Watch how we bring science to life for young minds</p>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-container">
+          <!-- Replace with your actual YouTube/Vimeo embed -->
+          <div class="video-placeholder" id="videoPlaceholder">
+            <!-- <img src="" 
+                 alt="STEM Dorado workshop video thumbnail" loading="lazy"> -->
+            <button class="play-btn" aria-label="Play video">
+              <i class="fas fa-play"></i>
+            </button>
+          </div>
+        </div>
+        <div class="video-features">
+          <div class="video-feature">
+            <div class="video-feature-icon"><i class="fas fa-microscope"></i></div>
+            <div>
+              <h4>Real Experiments</h4>
+              <p>Children perform hands-on experiments guided by qualified scientists</p>
+            </div>
+          </div>
+          <div class="video-feature">
+            <div class="video-feature-icon"><i class="fas fa-brain"></i></div>
+            <div>
+              <h4>Critical Thinking</h4>
+              <p>We stimulate logical reasoning and problem-solving skills</p>
+            </div>
+          </div>
+          <div class="video-feature">
+            <div class="video-feature-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <h4>Exam Confidence</h4>
+              <p>Deep understanding of scientific concepts that boosts performance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4. WHY STEM DORADO ===================== -->
+  <section class="why-section" id="about">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-content">
+          <span class="section-label">Why STEM Dorado?</span>
+          <h2 class="section-title left-align">We Don't Just Teach Science.<br>We <span class="highlight">Ignite Curiosity.</span></h2>
+          <p class="why-text">
+            At STEM Dorado, we are committed to inspiring and motivating children 
+            with innovative approaches, minds-on and hands-on training. We instil 
+            interest and curiosity in children that go a long way in building their careers.
+          </p>
+          <div class="why-points">
+            <div class="why-point">
+              <div class="why-point-icon"><i class="fas fa-user-graduate"></i></div>
+              <div>
+                <h4>Scientist-Led Sessions</h4>
+                <p>All workshops are designed and led by Dr Alina Chakraborty and qualified scientists.</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="why-point-icon"><i class="fas fa-hand-sparkles"></i></div>
+              <div>
+                <h4>Hands-On Learning</h4>
+                <p>Children learn by doing — not just reading. Every session includes real experiments.</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="why-point-icon"><i class="fas fa-rocket"></i></div>
+              <div>
+                <h4>STEM Skill Development</h4>
+                <p>Building logical reasoning, critical thinking, and a deep understanding of science fundamentals.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">
+            Learn More About Us
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="why-images">
+          <div class="why-image-main">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" 
+                 alt="Children doing science experiments" loading="lazy">
+          </div>
+          <div class="why-image-secondary">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&q=80" 
+                 alt="Kids learning STEM" loading="lazy">
+          </div>
+          <div class="why-floating-card">
+            <div class="why-floating-icon"><i class="fas fa-award"></i></div>
+            <div>
+              <strong>Trusted Partner</strong>
+              <p>Institute of Physics, UCL, BIFOR</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 5. PARENT REVIEWS ===================== -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What Parents Say</span>
+        <h2 class="section-title">Loved by Families Across London</h2>
+        <div class="reviews-rating">
+          <div class="stars-large">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <span>5.0 rating on Google Reviews</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review">
+          <div class="review-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Alina is very passionate about Science and Maths and wants to ensure 
+            the children she tutors understand the concepts and also perform well 
+            in their exams. She is extremely patient with my deaf daughter in year 6. 
+            I would absolutely recommend Alina..."
+          </p>
+          <button class="read-more-btn" data-full-text="Alina is very passionate about Science and Maths and wants to ensure the children she tutors understand the concepts and also perform well in their exams. She is extremely patient with my deaf daughter in year 6. I would absolutely recommend Alina as both my daughter's are now extremely interested in Maths & Sciences. Thank you Alina!!">
+            Read more
+          </button>
+          <div class="review-author">
+            <div class="review-avatar">L</div>
+            <div>
+              <strong>Lilian</strong>
+              <span>Parent</span>
+            </div>
+            <i class="fab fa-google review-google-icon"></i>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review">
+          <div class="review-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">
+            "My daughter in year 1 loved the fun maths workshop. Thank you so much. 
+            It was so well organised and thought through. The format was excellent."
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">K</div>
+            <div>
+              <strong>Kath</strong>
+              <span>Parent</span>
+            </div>
+            <i class="fab fa-google review-google-icon"></i>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review">
+          <div class="review-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="review-text">
+            "I was thoroughly impressed with both the content and presentation of 
+            the STEM Dorado Science magazine. The range of topics covered was 
+            excellent, ensuring children of various ages could find something of interest..."
+          </p>
+          <button class="read-more-btn" data-full-text="I was thoroughly impressed with both the content and presentation of the STEM Dorado Science magazine. The range of topics covered in this issue was excellent, ensuring that children of various ages and levels of understanding could find something of interest. The inclusion of interviews with real-life scientists was a brilliant addition. Moreover, the interactive elements such as puzzles, 'Did You Know' sections, fun facts, jokes, and cell games were a fun way to reinforce learning and encourage active participation. The experiments also encourage kids to be curious and explore, which is fantastic.">
+            Read more
+          </button>
+          <div class="review-author">
+            <div class="review-avatar">S</div>
+            <div>
+              <strong>Shweta</strong>
+              <span>Parent</span>
+            </div>
+            <i class="fab fa-google review-google-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 6. REGISTER TO OUR SERVICES ===================== -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Services</span>
+        <h2 class="section-title">Register to Our Services</h2>
+        <p class="section-subtitle">Three unique offerings designed to spark a lifelong love of science</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <div class="service-card-image">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80" 
+                 alt="Club STEM Dorado" loading="lazy">
+          </div>
+          <div class="service-card-content">
+            <h3>Club STEM Dorado</h3>
+            <p>
+              For 5–11 year olds. Weekly maths-science activity emails, 
+              science magazine every 2 months, online workshops, and a 
+              thriving community. <strong>And it's completely free.</strong>
+            </p>
+            <a href="#" class="service-link">
+              Register Now <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <div class="service-card-image">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=500&q=80" 
+                 alt="STEM Dorado Afterschool Science Club" loading="lazy">
+          </div>
+          <div class="service-card-content">
+            <h3>After-School Science Club</h3>
+            <p>
+              STEM Dorado after-school science clubs operate in 5 schools 
+              across North London. Science learning has never been more 
+              exciting and fun!
+            </p>
+            <div class="service-school-logos">
+              <span class="school-badge">St Mary's CE</span>
+              <span class="school-badge">Monkfrith</span>
+              <span class="school-badge">Garden Suburb</span>
+              <span class="school-badge">Dwight School</span>
+              <span class="school-badge">Millbrook Park</span>
+            </div>
+            <a href="#" class="service-link">
+              Know More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <div class="service-card-image">
+            <img src="https://images.unsplash.com/photo-1576319155264-99536e0be1ee?w=500&q=80" 
+                 alt="STEM Dorado Science Magazine" loading="lazy">
+          </div>
+          <div class="service-card-content">
+            <h3>STEM Dorado Science Magazine</h3>
+            <p>
+              Our award-worthy magazine features interviews with real scientists, 
+              hands-on experiments, puzzles, fun facts, and more — designed to 
+              make children curious and confident.
+            </p>
+            <div class="service-partners">
+              <span class="partner-badge">IOP</span>
+              <span class="partner-badge">BIFOR</span>
+              <span class="partner-badge">VaxHub</span>
+              <span class="partner-badge">Barnet</span>
+              <span class="partner-badge">KUMON</span>
+            </div>
+            <a href="#" class="service-link">
+              Know More <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 7. FOOTER ===================== -->
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <span class="logo-stem">STEM</span> Dorado
+          </a>
+          <p class="footer-desc">
+            Interactive STEM learning for children to develop life-changing skills. 
+            Inspiring the next generation of scientists, engineers, and innovators.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="clubs.html" class="nav-link">After-School Clubs</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#magazine">STEM Dorado Science</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+
+        <!-- Programs -->
+        <div class="footer-col">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="#">Club STEM Dorado</a></li>
+            <li><a href="#">After-School Clubs</a></li>
+            <li><a href="#">Science Magazine</a></li>
+            <li><a href="#">UCL Workshop</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-user"></i>
+              <span>Dr Alina Chakraborty</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@stemdorado.com">info@stemdorado.com</a>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>London, United Kingdom</span>
+            </li>
+          </ul>
+          <h4 style="margin-top: 1.5rem;">Careers</h4>
+          <p class="footer-careers">
+            Interested in joining our team? 
+            <a href="mailto:info@stemdorado.com">Get in touch →</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>© 2024 STEM Dorado Ltd · Company No. 15585249 · Registered in England and Wales</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
