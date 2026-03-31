@@ -15,33 +15,8 @@
 <body>
 
   <!-- ===================== HEADER / NAVBAR ===================== -->
-  <header class="header" id="header">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">
-        <span class="logo-stem">STEM</span> Dorado
-        <span class="logo-tagline">Explore · Discover · Learn · Invent · Grow</span>
-      </a>
+<div id="header-placeholder"></div>
 
-      <nav class="nav-menu" id="navMenu">
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="clubs.html" class="nav-link">After-School Clubs</a></li>
-          <li><a href="magazine.html" class="nav-link active">STEM Dorado Science</a></li>
-          <li><a href="news.html" class="nav-link">News</a></li>
-          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-
-      <a href="index.html#register" class="btn btn-register-header">Register</a>
-
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
 
   <!-- ===================== PAGE HERO ===================== -->
   <section class="magazine-hero">
@@ -188,298 +163,369 @@
   </section>
 
   <!-- ===================== MAGAZINE ISSUES GALLERY ===================== -->
-  <section class="issues-section" id="issues">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Our Collection</span>
-        <h2 class="section-title">Browse All Issues</h2>
-        <p class="section-subtitle">Each issue explores exciting themes in science and beyond</p>
+<!-- ===================== FEATURED LATEST ISSUE ===================== -->
+<section class="latest-issue-section">
+  <div class="container">
+    <div class="latest-issue-card">
+      <div class="latest-issue-image">
+        <img src="https://static.wixstatic.com/media/247e4e_b010a420d94b40e7807d188380c8a6a4~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20vol%2013.jpg" 
+             alt="STEM Dorado Science Vol. 13 — Latest Issue">
+        <div class="latest-issue-badge">
+          <i class="fas fa-star"></i> Latest Issue
+        </div>
       </div>
-
-      <!-- Filter Tabs -->
-      <div class="issues-filter">
-        <button class="filter-btn active" data-filter="all">All Issues</button>
-        <button class="filter-btn" data-filter="2024">2024</button>
-        <button class="filter-btn" data-filter="print">Print Available</button>
-      </div>
-
-      <!-- Issues Grid -->
-      <div class="issues-grid">
-
-                <!-- Issue 13 - Latest -->
-        <article class="issue-card" data-year="2024">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_b010a420d94b40e7807d188380c8a6a4~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20vol%2013.jpg" 
-                 alt="Vol.6 December 2024 - Dinosaurs">
-            <div class="issue-badge latest">Latest</div>
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/SD_Science-vol-13/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
+      <div class="latest-issue-content">
+        <span class="section-label">New Release</span>
+        <h2>Vol. 13 — February 2026</h2>
+        <p>
+          Our newest issue is packed with exciting experiments, interviews with real 
+          scientists, brain-teasing puzzles, fun facts, and artwork by our young readers. 
+          Available in both print and digital formats.
+        </p>
+        <div class="latest-issue-features">
+          <div class="li-feature">
+            <i class="fas fa-flask"></i>
+            <span>Hands-on Experiments</span>
           </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 13</span>
-            <p class="issue-date">February 2026</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-print"></i> Print</span>
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
+          <div class="li-feature">
+            <i class="fas fa-user-astronaut"></i>
+            <span>Scientist Interviews</span>
           </div>
-        </article>
-
-                <!-- Issue 12 - Latest -->
-        <article class="issue-card" data-year="2024">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_8d6a5855a019419fa187f8a0b7c55385~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20vol%2012%20(3).jpg" 
-                 alt="Vol.6 December 2024 - Dinosaurs">
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/SD_Science-vol-12/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
+          <div class="li-feature">
+            <i class="fas fa-puzzle-piece"></i>
+            <span>Puzzles & Games</span>
           </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 12</span>
-            <p class="issue-date">December 2025</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-print"></i> Print</span>
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
+          <div class="li-feature">
+            <i class="fas fa-palette"></i>
+            <span>Kids' Artwork</span>
           </div>
-        </article>
-
-                <!-- Issue 11 - Latest -->
-        <article class="issue-card" data-year="2024">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_5ffc8af155d4492c82904e7f2b8cbfbb~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science_vol_11.jpg" 
-                 alt="Vol.6 December 2024 - Dinosaurs">
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/qars/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
-          </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 11</span>
-            <p class="issue-date">October 2025</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-print"></i> Print</span>
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
-          </div>
-        </article>
-
-                <!-- Issue 10 - Latest -->
-        <article class="issue-card" data-year="2024">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_cd9e9d10688f4fd085bc14c021f36ebe~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20Vol%2010.jpg" 
-                 alt="Vol.6 December 2024 - Dinosaurs">
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/gahh/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
-          </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 10</span>
-            <p class="issue-date">August 2025</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-print"></i> Print</span>
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
-          </div>
-        </article>
-
-                <!-- Issue 9 - Latest -->
-        <article class="issue-card" data-year="2024">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_1cf2bf5e0a7c4f2da350e06f5503c733~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20vol9%20.jpg" 
-                 alt="Vol.6 December 2024 - Dinosaurs">
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/ojcp/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
-          </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 9</span>
-            <p class="issue-date">June 2025</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-print"></i> Print</span>
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
-          </div>
-        </article>
-
-                <!-- Issue 8 - Latest -->
-        <article class="issue-card" data-year="2024">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_b33ece31eed148d6b23b492afebff5f5~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20volume%208.jpg" 
-                 alt="Vol.6 December 2024 - Dinosaurs">
-            <div class="issue-badge latest">Latest</div>
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/jzki/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
-          </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 8</span>
-            <p class="issue-date">April 2025</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-print"></i> Print</span>
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
-          </div>
-        </article>
-
-                <!-- Issue 7 - Latest -->
-        <article class="issue-card" data-year="2024">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_220ee1cdb98544e7a1d3416ece5765d1~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD%20Science_vol%207.jpg" 
-                 alt="Vol.6 December 2024 - Dinosaurs">
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/xtyc/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
-          </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 7</span>
-            <p class="issue-date">February 2025</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-print"></i> Print</span>
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
-          </div>
-        </article>
-        <!-- Issue 6 - Latest -->
-        <article class="issue-card" data-year="2024">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_0093eb7546da48fbad3cfc51a1f102e6~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20vol%206.jpg" 
-                 alt="Vol.6 December 2024 - Dinosaurs">
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/lhan/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
-          </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 6</span>
-            <p class="issue-date">December 2024</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-print"></i> Print</span>
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Issue 5 -->
-        <article class="issue-card" data-year="2024" data-print="true">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_7f693200d2324f14a0358eba63d801ef~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science_Vol%205_print.jpg" 
-                 alt="Vol.5 October 2024 - Space & Planets">
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/mtpq/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
-          </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 5</span>
-            <p class="issue-date">October 2024</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-print"></i> Print</span>
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Issue 4 -->
-        <article class="issue-card" data-year="2024" data-print="true">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_2227d9b1521c476f90b2d3c454140aa2~mv2.jpg/v1/fill/w_276,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Vol_4%2C%20August%202024.jpg" 
-                 alt="Vol.4 August 2024 - Human Body">
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/isig/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
-          </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 4</span>
-            <p class="issue-date">August 2024</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-print"></i> Print</span>
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Issue 3 -->
-        <article class="issue-card" data-year="2024">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_0495a11701bb4543b622ed2071bae400~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/STEM%20Dorado%20vol%203.jpg" 
-                 alt="Vol.3 June 2024 - Innovation & Technology">
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/kssi/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
-          </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 3</span>
-            <p class="issue-date">June 2024</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Issue 2 -->
-        <article class="issue-card" data-year="2024">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_33410b3b67034fc99a138b88415cf751~mv2.jpg/v1/fill/w_295,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/247e4e_33410b3b67034fc99a138b88415cf751~mv2.jpg" 
-                 alt="Vol.2 April 2024 - Ocean & Marine Life">
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/inrp/#p=1" class="btn btn-sm btn-white"  target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
-          </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 2</span>
-            <p class="issue-date">April 2024</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Issue 1 -->
-        <article class="issue-card" data-year="2024">
-          <div class="issue-card-image">
-            <img src="https://static.wixstatic.com/media/247e4e_32fa9ecad3414afc8eaf7a0682cc1ec5~mv2.jpg/v1/fill/w_276,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_mag_cover.jpg" 
-                 alt="Vol.1 February 2024 - Climate & Environment">
-            <div class="issue-overlay">
-              <a href="https://online.fliphtml5.com/dqwze/micf/#p=1" class="btn btn-sm btn-white" target="_blank"  rel="noopener noreferrer">
-                <i class="fas fa-eye"></i> Preview
-              </a>
-            </div>
-          </div>
-          <div class="issue-card-content">
-            <span class="issue-volume">Vol. 1</span>
-            <!-- <h3>Climate & Environment</h3> -->
-            <p class="issue-date">February 2024</p>
-            <div class="issue-tags">
-              <span class="tag"><i class="fas fa-tablet-alt"></i> Digital</span>
-            </div>
-          </div>
-        </article>
+        </div>
+        <div class="latest-issue-tags">
+          <span class="format-tag print"><i class="fas fa-print"></i> Print</span>
+          <span class="format-tag digital"><i class="fas fa-tablet-alt"></i> Digital</span>
+        </div>
+        <div class="latest-issue-actions">
+          <a href="https://online.fliphtml5.com/dqwze/SD_Science-vol-13/#p=1" 
+             target="_blank" rel="noopener noreferrer" 
+             class="btn btn-primary btn-lg">
+            <i class="fas fa-eye"></i> Read Online
+          </a>
+          <a href="#subscribe" class="btn btn-outline btn-lg">
+            <i class="fas fa-envelope"></i> Subscribe
+          </a>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ===================== ALL ISSUES — MAGAZINE SHELF ===================== -->
+<section class="issues-section" id="issues">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Collection</span>
+      <h2 class="section-title">Browse All Issues</h2>
+      <p class="section-subtitle">Click any cover to read online for free</p>
+    </div>
+
+    <!-- Year Filters -->
+    <div class="year-tabs">
+      <button class="year-tab active" data-year="all">All Issues</button>
+      <button class="year-tab" data-year="2026">2026</button>
+      <button class="year-tab" data-year="2025">2025</button>
+      <button class="year-tab" data-year="2024">2024</button>
+    </div>
+
+    <!-- Magazine Shelf -->
+    <div class="magazine-shelf" id="magazineShelf">
+      
+      <!-- Vol 13 -->
+      <a href="https://online.fliphtml5.com/dqwze/SD_Science-vol-13/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2026">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_b010a420d94b40e7807d188380c8a6a4~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20vol%2013.jpg" 
+               alt="Vol. 13" loading="lazy">
+          <div class="shelf-badge new">New</div>
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 13</span>
+          <span class="shelf-date">Feb 2026</span>
+          <div class="shelf-formats">
+            <i class="fas fa-print" title="Print"></i>
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 12 -->
+      <a href="https://online.fliphtml5.com/dqwze/SD_Science-vol-12/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2025">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_8d6a5855a019419fa187f8a0b7c55385~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20vol%2012%20(3).jpg" 
+               alt="Vol. 12" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 12</span>
+          <span class="shelf-date">Dec 2025</span>
+          <div class="shelf-formats">
+            <i class="fas fa-print" title="Print"></i>
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 11 -->
+      <a href="https://online.fliphtml5.com/dqwze/qars/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2025">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_5ffc8af155d4492c82904e7f2b8cbfbb~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science_vol_11.jpg" 
+               alt="Vol. 11" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 11</span>
+          <span class="shelf-date">Oct 2025</span>
+          <div class="shelf-formats">
+            <i class="fas fa-print" title="Print"></i>
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 10 -->
+      <a href="https://online.fliphtml5.com/dqwze/gahh/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2025">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_cd9e9d10688f4fd085bc14c021f36ebe~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20Vol%2010.jpg" 
+               alt="Vol. 10" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 10</span>
+          <span class="shelf-date">Aug 2025</span>
+          <div class="shelf-formats">
+            <i class="fas fa-print" title="Print"></i>
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 9 -->
+      <a href="https://online.fliphtml5.com/dqwze/ojcp/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2025">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_1cf2bf5e0a7c4f2da350e06f5503c733~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20vol9%20.jpg" 
+               alt="Vol. 9" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 9</span>
+          <span class="shelf-date">Jun 2025</span>
+          <div class="shelf-formats">
+            <i class="fas fa-print" title="Print"></i>
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 8 -->
+      <a href="https://online.fliphtml5.com/dqwze/jzki/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2025">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_b33ece31eed148d6b23b492afebff5f5~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20volume%208.jpg" 
+               alt="Vol. 8" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 8</span>
+          <span class="shelf-date">Apr 2025</span>
+          <div class="shelf-formats">
+            <i class="fas fa-print" title="Print"></i>
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 7 -->
+      <a href="https://online.fliphtml5.com/dqwze/xtyc/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2025">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_220ee1cdb98544e7a1d3416ece5765d1~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD%20Science_vol%207.jpg" 
+               alt="Vol. 7" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 7</span>
+          <span class="shelf-date">Feb 2025</span>
+          <div class="shelf-formats">
+            <i class="fas fa-print" title="Print"></i>
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 6 -->
+      <a href="https://online.fliphtml5.com/dqwze/lhan/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2024">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_0093eb7546da48fbad3cfc51a1f102e6~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science%20vol%206.jpg" 
+               alt="Vol. 6" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 6</span>
+          <span class="shelf-date">Dec 2024</span>
+          <div class="shelf-formats">
+            <i class="fas fa-print" title="Print"></i>
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 5 -->
+      <a href="https://online.fliphtml5.com/dqwze/mtpq/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2024">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_7f693200d2324f14a0358eba63d801ef~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Science_Vol%205_print.jpg" 
+               alt="Vol. 5" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 5</span>
+          <span class="shelf-date">Oct 2024</span>
+          <div class="shelf-formats">
+            <i class="fas fa-print" title="Print"></i>
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 4 -->
+      <a href="https://online.fliphtml5.com/dqwze/isig/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2024">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_2227d9b1521c476f90b2d3c454140aa2~mv2.jpg/v1/fill/w_276,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_Vol_4%2C%20August%202024.jpg" 
+               alt="Vol. 4" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 4</span>
+          <span class="shelf-date">Aug 2024</span>
+          <div class="shelf-formats">
+            <i class="fas fa-print" title="Print"></i>
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 3 -->
+      <a href="https://online.fliphtml5.com/dqwze/kssi/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2024">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_0495a11701bb4543b622ed2071bae400~mv2.jpg/v1/fill/w_270,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/STEM%20Dorado%20vol%203.jpg" 
+               alt="Vol. 3" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 3</span>
+          <span class="shelf-date">Jun 2024</span>
+          <div class="shelf-formats">
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 2 -->
+      <a href="https://online.fliphtml5.com/dqwze/inrp/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2024">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_33410b3b67034fc99a138b88415cf751~mv2.jpg/v1/fill/w_295,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/247e4e_33410b3b67034fc99a138b88415cf751~mv2.jpg" 
+               alt="Vol. 2" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 2</span>
+          <span class="shelf-date">Apr 2024</span>
+          <div class="shelf-formats">
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Vol 1 -->
+      <a href="https://online.fliphtml5.com/dqwze/micf/#p=1" 
+         target="_blank" rel="noopener noreferrer" 
+         class="shelf-item" data-year="2024">
+        <div class="shelf-cover">
+          <img src="https://static.wixstatic.com/media/247e4e_32fa9ecad3414afc8eaf7a0682cc1ec5~mv2.jpg/v1/fill/w_276,h_381,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SD_mag_cover.jpg" 
+               alt="Vol. 1" loading="lazy">
+          <div class="shelf-hover">
+            <i class="fas fa-book-open"></i>
+            <span>Read Online</span>
+          </div>
+        </div>
+        <div class="shelf-info">
+          <span class="shelf-vol">Vol. 1</span>
+          <span class="shelf-date">Feb 2024</span>
+          <div class="shelf-formats">
+            <i class="fas fa-tablet-alt" title="Digital"></i>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
 
   <!-- ===================== EDUCATOR TESTIMONIALS ===================== -->
   <section class="educator-reviews">
@@ -665,70 +711,9 @@
   </section>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer class="footer" id="contact">
-    <div class="footer-top">
-      <div class="container footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="footer-logo">
-            <span class="logo-stem">STEM</span> Dorado
-          </a>
-          <p class="footer-desc">
-            Interactive STEM learning for children to develop life-changing skills. 
-            Inspiring the next generation of scientists, engineers, and innovators.
-          </p>
-          <div class="footer-socials">
-            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
+  <div id="footer-placeholder"></div>
 
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="clubs.html">After-School Clubs</a></li>
-            <li><a href="magazine.html">STEM Dorado Science</a></li>
-            <li><a href="news.html">News</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Magazine</h4>
-          <ul>
-            <li><a href="#issues">All Issues</a></li>
-            <li><a href="#subscribe">Subscribe Free</a></li>
-            <li><a href="#subscribe">Print Subscription</a></li>
-            <li><a href="mailto:info@stemdorado.com">School Subscription</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul class="footer-contact">
-            <li><i class="fas fa-user"></i><span>Dr Alina Chakraborty</span></li>
-            <li><i class="fas fa-envelope"></i><a href="mailto:info@stemdorado.com">info@stemdorado.com</a></li>
-            <li><i class="fas fa-map-marker-alt"></i><span>London, United Kingdom</span></li>
-          </ul>
-          <h4 style="margin-top: 1.5rem;">Careers</h4>
-          <p class="footer-careers">Interested in joining our team? <a href="news.html#careers">See open positions →</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container footer-bottom-content">
-        <p>© 2024 STEM Dorado Ltd · Company No. 15585249 · Registered in England and Wales</p>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <script src="js/components.js"></script>
   <script src="script.js"></script>
   <script src="magazine.js"></script>
 </body>
