@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book After-School Science Club | STEM Dorado</title>
+  <meta name="description" content="Book your child's place at STEM Dorado after-school science clubs across North London primary schools. Summer Term 2026 bookings now open.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+<div id="header-placeholder"></div>
+
+
+  <!-- ===================== HERO ===================== -->
+  <section class="booking-hero">
+    <div class="booking-hero-bg"></div>
+    <div class="container booking-hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="clubs.html">After-School Clubs</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Book a Place</span>
+      </nav>
+      <h1>Book Your Child's <span class="highlight">Science Club</span> Place</h1>
+      <p>Summer Term 2026 bookings now open across 7 schools in North London</p>
+      <div class="hero-trust-signals">
+        <div class="trust-item">
+          <i class="fas fa-shield-alt"></i>
+          <span>DBS Checked Staff</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-first-aid"></i>
+          <span>First Aid Trained</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-clock"></i>
+          <span>First Come, First Served</span>
+        </div>
+      </div>
+    </div>
+    <div class="booking-hero-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,80 C480,0 960,120 1440,40 L1440,120 L0,120 Z" fill="#f8f9fa"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===================== BOOKING PROGRESS ===================== -->
+  <section class="booking-main">
+    <div class="container">
+
+      <!-- Progress Steps -->
+      <div class="progress-bar">
+        <div class="progress-step active" data-step="1">
+          <div class="step-circle">
+            <span>1</span>
+            <i class="fas fa-check"></i>
+          </div>
+          <span class="step-label">Select School</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="2">
+          <div class="step-circle">
+            <span>2</span>
+            <i class="fas fa-check"></i>
+          </div>
+          <span class="step-label">Child Details</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="3">
+          <div class="step-circle">
+            <span>3</span>
+            <i class="fas fa-check"></i>
+          </div>
+          <span class="step-label">Parent & Safety</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="4">
+          <div class="step-circle">
+            <span>4</span>
+            <i class="fas fa-check"></i>
+          </div>
+          <span class="step-label">Review & Submit</span>
+        </div>
+      </div>
+
+      <!-- ========== STEP 1: SELECT SCHOOL ========== -->
+      <div class="booking-step" id="step1">
+        <div class="step-header">
+          <h2><span class="step-number-text">Step 1.</span> Choose Your School</h2>
+          <p>Select the school where your child attends</p>
+        </div>
+
+        <div class="schools-booking-grid" id="schoolsGrid">
+          <!-- School 1 -->
+          <div class="school-booking-card" data-school="st-marys" 
+               data-name="St. Mary's Primary School (Dollis Park)"
+               data-day="Tuesdays" data-time="3:15 PM - 4:15 PM" 
+               data-years="Years 1-6" data-sessions="11" 
+               data-price="15" data-total="165"
+               data-start="22 April 2026" data-end="8 July 2026">
+            <div class="sbc-icon"><i class="fas fa-school"></i></div>
+            <div class="sbc-content">
+              <h3>St. Mary's Primary School</h3>
+              <span class="sbc-location"><i class="fas fa-map-marker-alt"></i> Dollis Park</span>
+              <div class="sbc-details">
+                <span><i class="fas fa-calendar-day"></i> Tuesdays</span>
+                <span><i class="fas fa-clock"></i> 3:15 - 4:15 PM</span>
+                <span><i class="fas fa-child"></i> Years 1-6</span>
+              </div>
+              <div class="sbc-price">
+                <span class="sbc-per-session">£15<small>/session</small></span>
+                <span class="sbc-total">£165 total (11 sessions)</span>
+              </div>
+            </div>
+            <div class="sbc-status">
+              <span class="status-badge open"><i class="fas fa-circle"></i> Open</span>
+            </div>
+            <div class="sbc-select-indicator">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+
+          <!-- School 2 -->
+          <div class="school-booking-card" data-school="millbrook" 
+               data-name="Millbrook Park Primary School"
+               data-day="Wednesdays" data-time="3:15 PM - 4:15 PM" 
+               data-years="Years 3-6" data-sessions="11" 
+               data-price="15" data-total="165"
+               data-start="22 April 2026" data-end="8 July 2026">
+            <div class="sbc-icon"><i class="fas fa-school"></i></div>
+            <div class="sbc-content">
+              <h3>Millbrook Park Primary School</h3>
+              <span class="sbc-location"><i class="fas fa-map-marker-alt"></i> Mill Hill</span>
+              <div class="sbc-details">
+                <span><i class="fas fa-calendar-day"></i> Wednesdays</span>
+                <span><i class="fas fa-clock"></i> 3:15 - 4:15 PM</span>
+                <span><i class="fas fa-child"></i> Years 3-6</span>
+              </div>
+              <div class="sbc-price">
+                <span class="sbc-per-session">£15<small>/session</small></span>
+                <span class="sbc-total">£165 total (11 sessions)</span>
+              </div>
+            </div>
+            <div class="sbc-status">
+              <span class="status-badge open"><i class="fas fa-circle"></i> Open</span>
+            </div>
+            <div class="sbc-select-indicator">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+
+          <!-- School 3 -->
+          <div class="school-booking-card" data-school="holy-trinity" 
+               data-name="Holy Trinity Primary School (East Finchley)"
+               data-day="Thursdays" data-time="3:30 PM - 4:30 PM" 
+               data-years="Years 1-6" data-sessions="10" 
+               data-price="15" data-total="150"
+               data-start="23 April 2026" data-end="9 July 2026">
+            <div class="sbc-icon"><i class="fas fa-school"></i></div>
+            <div class="sbc-content">
+              <h3>Holy Trinity Primary School</h3>
+              <span class="sbc-location"><i class="fas fa-map-marker-alt"></i> East Finchley</span>
+              <div class="sbc-details">
+                <span><i class="fas fa-calendar-day"></i> Thursdays</span>
+                <span><i class="fas fa-clock"></i> 3:30 - 4:30 PM</span>
+                <span><i class="fas fa-child"></i> Years 1-6</span>
+              </div>
+              <div class="sbc-price">
+                <span class="sbc-per-session">£15<small>/session</small></span>
+                <span class="sbc-total">£150 total (10 sessions)</span>
+              </div>
+            </div>
+            <div class="sbc-status">
+              <span class="status-badge open"><i class="fas fa-circle"></i> Open</span>
+            </div>
+            <div class="sbc-select-indicator">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+
+          <!-- School 4 -->
+          <div class="school-booking-card" data-school="garden-suburb-infant" 
+               data-name="Garden Suburb Infant School"
+               data-day="Mondays" data-time="3:15 PM - 4:15 PM" 
+               data-years="Reception - Year 2" data-sessions="11" 
+               data-price="15" data-total="165"
+               data-start="20 April 2026" data-end="6 July 2026">
+            <div class="sbc-icon"><i class="fas fa-school"></i></div>
+            <div class="sbc-content">
+              <h3>Garden Suburb Infant School</h3>
+              <span class="sbc-location"><i class="fas fa-map-marker-alt"></i> Hampstead Garden Suburb</span>
+              <div class="sbc-details">
+                <span><i class="fas fa-calendar-day"></i> Mondays</span>
+                <span><i class="fas fa-clock"></i> 3:15 - 4:15 PM</span>
+                <span><i class="fas fa-child"></i> Reception - Year 2</span>
+              </div>
+              <div class="sbc-price">
+                <span class="sbc-per-session">£15<small>/session</small></span>
+                <span class="sbc-total">£165 total (11 sessions)</span>
+              </div>
+            </div>
+            <div class="sbc-status">
+              <span class="status-badge open"><i class="fas fa-circle"></i> Open</span>
+            </div>
+            <div class="sbc-select-indicator">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+
+          <!-- School 5 -->
+          <div class="school-booking-card" data-school="garden-suburb-junior" 
+               data-name="Garden Suburb Junior School"
+               data-day="Mondays" data-time="3:30 PM - 4:30 PM" 
+               data-years="Years 3-6" data-sessions="11" 
+               data-price="15" data-total="165"
+               data-start="20 April 2026" data-end="6 July 2026">
+            <div class="sbc-icon"><i class="fas fa-school"></i></div>
+            <div class="sbc-content">
+              <h3>Garden Suburb Junior School</h3>
+              <span class="sbc-location"><i class="fas fa-map-marker-alt"></i> Hampstead Garden Suburb</span>
+              <div class="sbc-details">
+                <span><i class="fas fa-calendar-day"></i> Mondays</span>
+                <span><i class="fas fa-clock"></i> 3:30 - 4:30 PM</span>
+                <span><i class="fas fa-child"></i> Years 3-6</span>
+              </div>
+              <div class="sbc-price">
+                <span class="sbc-per-session">£15<small>/session</small></span>
+                <span class="sbc-total">£165 total (11 sessions)</span>
+              </div>
+            </div>
+            <div class="sbc-status">
+              <span class="status-badge open"><i class="fas fa-circle"></i> Open</span>
+            </div>
+            <div class="sbc-select-indicator">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+
+          <!-- School 6 -->
+          <div class="school-booking-card" data-school="brookland" 
+               data-name="Brookland Junior School"
+               data-day="Fridays" data-time="3:15 PM - 4:15 PM" 
+               data-years="Years 3-6" data-sessions="10" 
+               data-price="15" data-total="150"
+               data-start="24 April 2026" data-end="10 July 2026">
+            <div class="sbc-icon"><i class="fas fa-school"></i></div>
+            <div class="sbc-content">
+              <h3>Brookland Junior School</h3>
+              <span class="sbc-location"><i class="fas fa-map-marker-alt"></i> North London</span>
+              <div class="sbc-details">
+                <span><i class="fas fa-calendar-day"></i> Fridays</span>
+                <span><i class="fas fa-clock"></i> 3:15 - 4:15 PM</span>
+                <span><i class="fas fa-child"></i> Years 3-6</span>
+              </div>
+              <div class="sbc-price">
+                <span class="sbc-per-session">£15<small>/session</small></span>
+                <span class="sbc-total">£150 total (10 sessions)</span>
+              </div>
+            </div>
+            <div class="sbc-status">
+              <span class="status-badge open"><i class="fas fa-circle"></i> Open</span>
+            </div>
+            <div class="sbc-select-indicator">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+
+          <!-- School 7 - Contact School -->
+          <div class="school-booking-card contact-school" data-school="dwight" 
+               data-name="Dwight School London"
+               data-day="TBC" data-time="TBC" 
+               data-years="Various" data-sessions="TBC" 
+               data-price="0" data-total="0"
+               data-start="TBC" data-end="TBC">
+            <div class="sbc-icon international"><i class="fas fa-globe"></i></div>
+            <div class="sbc-content">
+              <h3>Dwight School London</h3>
+              <span class="sbc-location"><i class="fas fa-map-marker-alt"></i> North London</span>
+              <p class="sbc-contact-note">Please contact the school directly for booking information</p>
+            </div>
+            <div class="sbc-status">
+              <span class="status-badge contact"><i class="fas fa-envelope"></i> Contact School</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selected School Summary -->
+        <div class="selected-school-summary" id="selectedSummary" style="display: none;">
+          <div class="summary-header">
+            <i class="fas fa-check-circle"></i>
+            <h3>Selected: <span id="summarySchoolName"></span></h3>
+          </div>
+          <div class="summary-details">
+            <div class="summary-item">
+              <i class="fas fa-calendar-day"></i>
+              <span id="summaryDay"></span>
+            </div>
+            <div class="summary-item">
+              <i class="fas fa-clock"></i>
+              <span id="summaryTime"></span>
+            </div>
+            <div class="summary-item">
+              <i class="fas fa-calendar-alt"></i>
+              <span id="summaryDates"></span>
+            </div>
+            <div class="summary-item">
+              <i class="fas fa-pound-sign"></i>
+              <span id="summaryPrice"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-actions">
+          <div></div>
+          <button class="btn btn-primary btn-lg" id="step1Next" disabled>
+            Continue to Child Details
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- ========== STEP 2: CHILD DETAILS ========== -->
+      <div class="booking-step" id="step2" style="display: none;">
+        <div class="step-header">
+          <h2><span class="step-number-text">Step 2.</span> Child Details</h2>
+          <p>Tell us about the child attending the science club</p>
+        </div>
+
+        <div class="form-card">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="childName">Child's Full Name <span class="required">*</span></label>
+              <input type="text" id="childName" placeholder="Enter child's full name" required>
+              <span class="form-error" id="childNameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="childYear">Year Group & Class <span class="required">*</span></label>
+              <input type="text" id="childYear" placeholder="e.g., Year 4, Class Oak" required>
+              <span class="form-error" id="childYearError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="medicalInfo">Does the child have any medical condition including allergies we should be aware of? <span class="required">*</span></label>
+            <textarea id="medicalInfo" rows="3" placeholder="Please provide details of any allergies, medical conditions, or 'None'" required></textarea>
+            <span class="form-error" id="medicalInfoError"></span>
+          </div>
+
+          <div class="form-group">
+            <label>How will the child be collected after the club? <span class="required">*</span></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="collection" value="parent" required>
+                <span class="radio-custom"></span>
+                <span class="radio-label">
+                  <i class="fas fa-user"></i>
+                  Will be collected by a parent/authorised person from the school gate
+                </span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="collection" value="self">
+                <span class="radio-custom"></span>
+                <span class="radio-label">
+                  <i class="fas fa-walking"></i>
+                  Will go to the after-school club / walk home independently
+                </span>
+              </label>
+            </div>
+            <span class="form-error" id="collectionError"></span>
+          </div>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn btn-ghost" id="step2Back">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+          <button class="btn btn-primary btn-lg" id="step2Next">
+            Continue to Parent Details
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- ========== STEP 3: PARENT & SAFETY ========== -->
+      <div class="booking-step" id="step3" style="display: none;">
+        <div class="step-header">
+          <h2><span class="step-number-text">Step 3.</span> Parent Details & Consent</h2>
+          <p>Your contact information and consent preferences</p>
+        </div>
+
+        <div class="form-card">
+          <h3 class="form-section-title"><i class="fas fa-user-friends"></i> Parent / Guardian Details</h3>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="parentName">Parent's Full Name <span class="required">*</span></label>
+              <input type="text" id="parentName" placeholder="Enter parent's full name" required>
+              <span class="form-error" id="parentNameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="parentEmail">Email Address <span class="required">*</span></label>
+              <input type="email" id="parentEmail" placeholder="parent@email.com" required>
+              <span class="form-error" id="parentEmailError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="parentPhone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="parentPhone" placeholder="07XXX XXXXXX" required>
+              <span class="form-error" id="parentPhoneError"></span>
+            </div>
+            <div class="form-group">
+              <label for="emergencyContact">Emergency Contact <span class="form-hint">(if different)</span></label>
+              <input type="tel" id="emergencyContact" placeholder="Alternative phone number">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3 class="form-section-title"><i class="fas fa-camera"></i> Photo Consent</h3>
+          <p class="consent-text">
+            STEM Dorado takes photographs of sessions that may be shared with parents or used in 
+            STEM Dorado magazine/website for promotional purposes. Your child may be present in 
+            some of the photographs. Do you give your consent for your child's photograph to be 
+            used as stated? <span class="required">*</span>
+          </p>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="photoConsent" value="yes" required>
+              <span class="radio-custom"></span>
+              <span class="radio-label"><i class="fas fa-check-circle text-success"></i> Yes, I give consent</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="photoConsent" value="no">
+              <span class="radio-custom"></span>
+              <span class="radio-label"><i class="fas fa-times-circle text-danger"></i> No, I do not give consent</span>
+            </label>
+          </div>
+          <span class="form-error" id="photoConsentError"></span>
+        </div>
+
+        <div class="form-card">
+          <h3 class="form-section-title"><i class="fas fa-star"></i> Free STEM Dorado Membership</h3>
+          <p class="consent-text">
+            Do you want to enrol your child for a free STEM Dorado membership? Members receive 
+            weekly email with science-maths activities and the opportunity to contribute to the 
+            children's space in STEM Dorado's Science magazine. <span class="required">*</span>
+          </p>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="membership" value="yes" required>
+              <span class="radio-custom"></span>
+              <span class="radio-label"><i class="fas fa-check"></i> Yes, please enrol my child</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="membership" value="no">
+              <span class="radio-custom"></span>
+              <span class="radio-label"><i class="fas fa-times"></i> No, thank you</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="membership" value="already">
+              <span class="radio-custom"></span>
+              <span class="radio-label"><i class="fas fa-user-check"></i> Already a member</span>
+            </label>
+          </div>
+          <span class="form-error" id="membershipError"></span>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn btn-ghost" id="step3Back">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+          <button class="btn btn-primary btn-lg" id="step3Next">
+            Review Booking
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- ========== STEP 4: REVIEW & SUBMIT ========== -->
+      <div class="booking-step" id="step4" style="display: none;">
+        <div class="step-header">
+          <h2><span class="step-number-text">Step 4.</span> Review & Submit</h2>
+          <p>Please review all details before submitting your booking</p>
+        </div>
+
+        <div class="review-container">
+          <!-- School Details -->
+          <div class="review-card">
+            <div class="review-card-header">
+              <i class="fas fa-school"></i>
+              <h3>School & Session Details</h3>
+              <button class="edit-btn" onclick="goToStep(1)"><i class="fas fa-pen"></i> Edit</button>
+            </div>
+            <div class="review-grid" id="reviewSchool"></div>
+          </div>
+
+          <!-- Child Details -->
+          <div class="review-card">
+            <div class="review-card-header">
+              <i class="fas fa-child"></i>
+              <h3>Child Details</h3>
+              <button class="edit-btn" onclick="goToStep(2)"><i class="fas fa-pen"></i> Edit</button>
+            </div>
+            <div class="review-grid" id="reviewChild"></div>
+          </div>
+
+          <!-- Parent Details -->
+          <div class="review-card">
+            <div class="review-card-header">
+              <i class="fas fa-user-friends"></i>
+              <h3>Parent Details & Consent</h3>
+              <button class="edit-btn" onclick="goToStep(3)"><i class="fas fa-pen"></i> Edit</button>
+            </div>
+            <div class="review-grid" id="reviewParent"></div>
+          </div>
+
+          <!-- Payment Summary -->
+          <div class="review-card payment-summary">
+            <div class="review-card-header">
+              <i class="fas fa-receipt"></i>
+              <h3>Payment Summary</h3>
+            </div>
+            <div class="payment-details" id="paymentDetails"></div>
+            <p class="payment-note">
+              <i class="fas fa-info-circle"></i>
+              An invoice will follow submission of this form. Registration will be confirmed 
+              after payment of the term fees. Booking is on a first come, first served basis.
+            </p>
+          </div>
+
+          <!-- Terms -->
+          <div class="terms-checkbox">
+            <label class="checkbox-option">
+              <input type="checkbox" id="agreeTerms" required>
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">
+                I confirm that all information provided is accurate and I agree to the 
+                <a href="#" target="_blank">terms and conditions</a> and 
+                <a href="#" target="_blank">safeguarding policy</a> of STEM Dorado.
+              </span>
+            </label>
+            <span class="form-error" id="termsError"></span>
+          </div>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn btn-ghost" id="step4Back">
+            <i class="fas fa-arrow-left"></i> Back
+          </button>
+          <button class="btn btn-primary btn-lg btn-submit" id="submitBooking" disabled>
+            <i class="fas fa-paper-plane"></i>
+            Submit Booking
+          </button>
+        </div>
+      </div>
+
+      <!-- ========== SUCCESS STATE ========== -->
+      <div class="booking-step" id="stepSuccess" style="display: none;">
+        <div class="success-container">
+          <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h2>Booking Submitted Successfully!</h2>
+          <p>Thank you for registering your child for STEM Dorado's after-school science club.</p>
+          
+          <div class="success-details">
+            <div class="success-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Confirmation Email</strong>
+                <span>A confirmation email will be sent to your registered email address.</span>
+              </div>
+            </div>
+            <div class="success-item">
+              <i class="fas fa-file-invoice"></i>
+              <div>
+                <strong>Invoice</strong>
+                <span>An invoice for the term fees will follow shortly.</span>
+              </div>
+            </div>
+            <div class="success-item">
+              <i class="fas fa-check-double"></i>
+              <div>
+                <strong>Registration Confirmation</strong>
+                <span>Your child's place will be confirmed upon receipt of payment.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="success-actions">
+            <a href="clubs.html" class="btn btn-primary btn-lg">
+              <i class="fas fa-arrow-left"></i> Back to Clubs
+            </a>
+            <a href="index.html" class="btn btn-outline btn-lg">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </div>
+
+          <p class="success-note">
+            Questions? Contact us at <a href="mailto:info@stemdorado.com">info@stemdorado.com</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="booking-faq" id="bookingFAQ">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Questions?</span>
+        <h2 class="section-title">Booking FAQs</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item-detail">
+          <summary><i class="fas fa-pound-sign"></i> What's included in the fee?</summary>
+          <p>The fee includes stationery and personal protection kits. All science materials and equipment are provided.</p>
+        </details>
+        <details class="faq-item-detail">
+          <summary><i class="fas fa-credit-card"></i> How do I pay?</summary>
+          <p>An invoice will be sent after you submit the booking form. Registration is confirmed after payment of the full term fees.</p>
+        </details>
+        <details class="faq-item-detail">
+          <summary><i class="fas fa-exchange-alt"></i> Can I get a refund?</summary>
+          <p>Please contact us at info@stemdorado.com for our refund and cancellation policy.</p>
+        </details>
+        <details class="faq-item-detail">
+          <summary><i class="fas fa-user-plus"></i> Can I book for multiple children?</summary>
+          <p>Yes! Please submit a separate booking form for each child.</p>
+        </details>
+        <details class="faq-item-detail">
+          <summary><i class="fas fa-shield-alt"></i> Is my data safe?</summary>
+          <p>Absolutely. We handle all personal data in accordance with GDPR and our privacy policy. Your information is only used for booking and safety purposes.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+  <script src="script.js"></script>
+  <script src="booking.js"></script>
+</body>
+</html>
