@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | STEM Dorado — Moments of Discovery</title>
+  <meta name="description" content="Explore photos from STEM Dorado workshops, science clubs, events and magazine features. See how we bring science to life for children aged 5-11.">
+  <link rel="canonical" href="https://www.stemdorado.com/gallery.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gallery | STEM Dorado">
+  <meta property="og:description" content="Photos from our workshops, science clubs and events.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <div id="header-placeholder"></div>
+
+  <!-- ===================== GALLERY HERO ===================== -->
+  <section class="gallery-hero">
+    <div class="gallery-hero-bg"></div>
+    <div class="container gallery-hero-content">
+      <div class="gallery-hero-text">
+        <!-- ✅ Breadcrumb matching About page -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Gallery</span>
+        </nav>
+        <h1>Moments of <span class="highlight">Discovery</span></h1>
+        <p>A glimpse into our workshops, science clubs, and the curious minds we inspire every day.</p>
+      </div>
+    </div>
+    <div class="gallery-hero-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,80 C480,0 960,120 1440,40 L1440,120 L0,120 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===================== FILTER TABS ===================== -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fas fa-th"></i> All
+        </button>
+        <button class="filter-btn" data-filter="workshops">
+          <i class="fas fa-flask"></i> Workshops
+        </button>
+        <button class="filter-btn" data-filter="science-club">
+          <i class="fas fa-atom"></i> Science Club
+        </button>
+        <button class="filter-btn" data-filter="magazine">
+          <i class="fas fa-book-open"></i> Magazine
+        </button>
+        <button class="filter-btn" data-filter="events">
+          <i class="fas fa-calendar-star"></i> Events
+        </button>
+      </div>
+
+      <!-- ===================== GALLERY GRID ===================== -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Images injected by JS -->
+      </div>
+
+      <!-- ===================== LOAD MORE ===================== -->
+      <div class="gallery-load-more" id="loadMoreWrapper">
+        <p class="gallery-count" id="galleryCount"></p>
+        <button class="btn btn-primary btn-lg" id="loadMoreBtn">
+          <i class="fas fa-images"></i>
+          Load More Photos
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LIGHTBOX MODAL ===================== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <div id="footer-placeholder"></div>
+
+  <script src="js/components.js"></script>
+  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>
