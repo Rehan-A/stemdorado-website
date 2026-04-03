@@ -223,7 +223,6 @@ ul {
   justify-content: space-between;
   height: 76px;
 }
-
 /* ===== LOGO ===== */
 .logo {
   display: flex;
@@ -237,22 +236,22 @@ ul {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary);
+  color: #1a5c2a; /* Dark Forest Green */
 }
 
-.logo {
+.logo .logo-dorado {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--dark);
+  color: #4a2812; /* Dark Chocolate Brown */
 }
 
 .logo-tagline {
   font-family: var(--font-body);
   font-size: 0.55rem;
-  font-weight: 500;
-  color: var(--text-light);
-  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: #1a5c2a; /* Same dark green as STEM */
+  letter-spacing: 2px;
   text-transform: uppercase;
   white-space: nowrap;
   max-width: 200px;
