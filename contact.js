@@ -298,3 +298,220 @@ function initSendAnother() {
     });
   }
 }
+
+
+// ================================================================
+// CONTACT PAGE — FORMSUBMIT INTEGRATION
+// ================================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const contactForm      = document.getElementById('contactForm');
+  const contactSubmitBtn = document.getElementById('contactSubmitBtn');
+  const formSuccess      = document.getElementById('formSuccess');
+  const sendAnotherBtn   = document.getElementById('sendAnotherBtn');
+  const formHeader       = document.querySelector('.form-header');
+
+  // ================================================================
+  // CHECK FOR SUCCESS REDIRECT FROM FORMSUBMIT
+  // ================================================================
+  function checkForSuccess() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === 'true') {
+      showSuccess();
+      // Clean URL
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }
+
+  function showSuccess() {
+    if (contactForm) contactForm.style.display = 'none';
+    if (formHeader) formHeader.style.display = 'none';
+    if (formSuccess) formSuccess.style.display = 'flex';
+    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function resetForm() {
+    if (contactForm) {
+      contactForm.style.display = 'block';
+      contactForm.reset();
+    }
+    if (formHeader) formHeader.style.display = 'block';
+    if (formSuccess) formSuccess.style.display = 'none';
+
+    contactSubmitBtn.disabled = false;
+    const btnText = contactSubmitBtn.querySelector('.btn-text');
+    const btnLoading = contactSubmitBtn.querySelector('.btn-loading');
+    if (btnText) btnText.style.display = 'inline-flex';
+    if (btnLoading) btnLoading.style.display = 'none';
+
+    // Reset conditional fields
+    document.getElementById('schoolField').style.display = 'none';
+    document.getElementById('orgField').style.display = 'none';
+    document.getElementById('inquiryContext').style.display = 'none';
+
+    document.querySelectorAll('.form-error').forEach(el => el.textContent = '');
+    document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+  }
+
+  if (sendAnotherBtn) {
+    sendAnotherBtn.addEventListener('click', resetForm);
+  }
+
+  // ================================================================
+  // VALIDATION
+  // ================================================================
+  function validateContactForm() {
+    let valid = true;
+
+    function setError(id, errorId, message) {
+      const input = document.getElementById(id);
+      const error = document.getElementById(errorId);
+      if (input) input.classList.add('error');
+      if (error) error.textContent = message;
+      valid = false;
+    }
+
+    function clearError(id, errorId) {
+      const input = document.getElementById(id);
+      const error = document.getElementById(errorId);
+      if (input) input.classList.remove('error');
+      if (error) error.textContent = '';
+    }
+
+    // Inquiry Type
+    const inquiryType = document.getElementById('inquiryType');
+    if (!inquiryType.value) {
+      setError('inquiryType', 'inquiryTypeError', 'Please select an enquiry type.');
+    } else {
+      clearError('inquiryType', 'inquiryTypeError');
+    }
+
+    // First & Last Name
+    const firstName = document.getElementById('contactFirstName');
+    if (!firstName.value.trim()) setError('contactFirstName', 'contactFirstNameError', 'First name is required.');
+    else clearError('contactFirstName', 'contactFirstNameError');
+
+    const lastName = document.getElementById('contactLastName');
+    if (!lastName.value.trim()) setError('contactLastName', 'contactLastNameError', 'Last name is required.');
+    else clearError('contactLastName', 'contactLastNameError');
+
+    // Email
+    const email = document.getElementById('contactEmail');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
+      setError('contactEmail', 'contactEmailError', 'Please enter a valid email address.');
+    } else {
+      clearError('contactEmail', 'contactEmailError');
+    }
+
+    // Subject
+    const subject = document.getElementById('contactSubject');
+    if (!subject.value.trim()) {
+      setError('contactSubject', 'contactSubjectError', 'Please enter a subject.');
+    } else {
+      clearError('contactSubject', 'contactSubjectError');
+    }
+
+    // Message
+    const message = document.getElementById('contactMessage');
+    if (!message.value.trim() || message.value.trim().length < 20) {
+      setError('contactMessage', 'contactMessageError', 'Please write a message (minimum 20 characters).');
+    } else {
+      clearError('contactMessage', 'contactMessageError');
+    }
+
+    return valid;
+  }
+
+  // ================================================================
+  // FORM SUBMISSION — FIXED VERSION
+  // ================================================================
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+
+      e.preventDefault();           // Stop default to run validation
+
+      if (!validateContactForm()) {
+        return;                     // Stop if validation fails
+      }
+
+      // Validation passed → Show loading
+      contactSubmitBtn.disabled = true;
+      const btnText = contactSubmitBtn.querySelector('.btn-text');
+      const btnLoading = contactSubmitBtn.querySelector('.btn-loading');
+      if (btnText) btnText.style.display = 'none';
+      if (btnLoading) btnLoading.style.display = 'inline-flex';
+
+      // CRITICAL: Submit the form naturally to FormSubmit
+      contactForm.submit();
+    });
+  }
+
+  // ================================================================
+  // CHARACTER COUNT
+  // ================================================================
+  const contactMessage = document.getElementById('contactMessage');
+  const charCount = document.getElementById('charCount');
+
+  if (contactMessage && charCount) {
+    contactMessage.addEventListener('input', () => {
+      let count = contactMessage.value.length;
+      if (count > 2000) {
+        contactMessage.value = contactMessage.value.substring(0, 2000);
+        count = 2000;
+      }
+      charCount.textContent = count;
+
+      charCount.style.color = count > 1800 ? '#ef4444' : 
+                             (count > 1500 ? 'var(--accent)' : 'var(--text-light)');
+    });
+  }
+
+  // ================================================================
+  // CONDITIONAL FIELDS + CONTEXT MESSAGE
+  // ================================================================
+  const inquirySelect = document.getElementById('inquiryType');
+  const schoolField = document.getElementById('schoolField');
+  const orgField = document.getElementById('orgField');
+  const inquiryContext = document.getElementById('inquiryContext');
+  const contextMessage = document.getElementById('contextMessage');
+
+  const contextTexts = {
+    'after-school-clubs': 'Let us know which school your child attends and their year group.',
+    'booking-payment': 'Please include your booking reference if you have one.',
+    'magazine': 'Tell us if this is about a new subscription or an existing one.',
+    'birthday-parties': 'Please include your preferred date and number of children.',
+    'partnership': 'Tell us about your organisation and what kind of collaboration you have in mind.',
+    'schools': 'Let us know your school name and the year groups you are interested in.',
+    'careers': 'Tell us about your background and the type of role you are interested in.',
+    'press': 'Please include your publication name and deadline if applicable.',
+    'feedback': 'We really appreciate your feedback!',
+    'general': 'Please describe your enquiry in as much detail as possible.',
+    'other': 'Please describe your enquiry in as much detail as possible.'
+  };
+
+  if (inquirySelect) {
+    inquirySelect.addEventListener('change', () => {
+      const value = inquirySelect.value;
+
+      // Context message
+      if (contextTexts[value]) {
+        contextMessage.textContent = contextTexts[value];
+        inquiryContext.style.display = 'flex';
+      } else {
+        inquiryContext.style.display = 'none';
+      }
+
+      // Conditional fields
+      schoolField.style.display = ['after-school-clubs', 'schools', 'birthday-parties'].includes(value) ? 'block' : 'none';
+      orgField.style.display = ['partnership', 'press', 'careers'].includes(value) ? 'block' : 'none';
+    });
+  }
+
+  // ================================================================
+  // INITIALIZE
+  // ================================================================
+  checkForSuccess();
+
+});

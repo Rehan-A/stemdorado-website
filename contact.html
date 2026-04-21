@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | STEM Dorado — Get in Touch</title>
-  <meta name="description" content="Contact STEM Dorado for enquiries about after-school science clubs, magazine subscriptions, birthday parties, partnerships, and more. Based in North London.">
+  <meta name="description"
+    content="Contact STEM Dorado for enquiries about after-school science clubs, magazine subscriptions, birthday parties, partnerships, and more. Based in North London.">
   <link rel="canonical" href="https://www.stemdorado.com/contact.html">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Contact STEM Dorado">
-  <meta property="og:description" content="Get in touch with our team for enquiries about science clubs, magazine, partnerships and more.">
+  <meta property="og:description"
+    content="Get in touch with our team for enquiries about science clubs, magazine, partnerships and more.">
   <meta property="og:type" content="website">
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="contact.css">
 </head>
+
 <body>
 
   <!-- ===================== HEADER ===================== -->
-<div id="header-placeholder"></div>
+  <div id="header-placeholder"></div>
 
   <!-- ===================== HERO ===================== -->
   <section class="contact-hero">
@@ -37,11 +43,12 @@
         <span>Contact Us</span>
       </nav>
       <h1>Get in <span class="highlight">Touch</span></h1>
-      <p>We'd love to hear from you! Whether you have a question, want to partner with us, or just want to say hello.</p>
+      <p>We'd love to hear from you! Whether you have a question, want to partner with us, or just want to say hello.
+      </p>
     </div>
     <div class="contact-hero-wave">
       <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,80 C480,0 960,120 1440,40 L1440,120 L0,120 Z" fill="#f8f9fa"/>
+        <path d="M0,80 C480,0 960,120 1440,40 L1440,120 L0,120 Z" fill="#f8f9fa" />
       </svg>
     </div>
   </section>
@@ -111,12 +118,24 @@
             <p>Fill out the form below and we'll get back to you as soon as possible.</p>
           </div>
 
-          <form class="contact-form" id="contactForm" novalidate>
-            <!-- Inquiry Type Dropdown -->
+          <!-- ===== FORM ===== -->
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/rehansayyaduk@gmail.com" method="POST"
+            novalidate>
+
+            <!-- FormSubmit Hidden Config -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New STEM Dorado Enquiry">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://rehan-a.github.io/stemdorado-website/contact.html?success=true">
+
+            <!-- Inquiry Type -->
             <div class="form-group">
-              <label for="inquiryType">What is your enquiry about? <span class="required">*</span></label>
+              <label for="inquiryType">
+                What is your enquiry about?
+                <span class="required">*</span>
+              </label>
               <div class="custom-select-wrapper">
-                <select id="inquiryType" required>
+                <select id="inquiryType" name="Enquiry Type" required>
                   <option value="" disabled selected>Select a category</option>
                   <option value="after-school-clubs">🏫 After-School Science Clubs</option>
                   <option value="booking-payment">💳 Booking & Payment</option>
@@ -135,7 +154,7 @@
               <span class="form-error" id="inquiryTypeError"></span>
             </div>
 
-            <!-- Dynamic context message based on selection -->
+            <!-- Dynamic Context Message -->
             <div class="inquiry-context" id="inquiryContext" style="display: none;">
               <i class="fas fa-info-circle"></i>
               <span id="contextMessage"></span>
@@ -144,13 +163,17 @@
             <!-- Name Fields -->
             <div class="form-row">
               <div class="form-group">
-                <label for="contactFirstName">First Name <span class="required">*</span></label>
-                <input type="text" id="contactFirstName" placeholder="Your first name" required>
+                <label for="contactFirstName">
+                  First Name <span class="required">*</span>
+                </label>
+                <input type="text" id="contactFirstName" name="First Name" placeholder="Your first name" required>
                 <span class="form-error" id="contactFirstNameError"></span>
               </div>
               <div class="form-group">
-                <label for="contactLastName">Last Name <span class="required">*</span></label>
-                <input type="text" id="contactLastName" placeholder="Your last name" required>
+                <label for="contactLastName">
+                  Last Name <span class="required">*</span>
+                </label>
+                <input type="text" id="contactLastName" name="Last Name" placeholder="Your last name" required>
                 <span class="form-error" id="contactLastNameError"></span>
               </div>
             </div>
@@ -158,61 +181,83 @@
             <!-- Email & Phone -->
             <div class="form-row">
               <div class="form-group">
-                <label for="contactEmail">Email Address <span class="required">*</span></label>
+                <label for="contactEmail">
+                  Email Address <span class="required">*</span>
+                </label>
                 <div class="input-icon-wrapper">
                   <i class="fas fa-envelope"></i>
-                  <input type="email" id="contactEmail" placeholder="you@example.com" required>
+                  <input type="email" id="contactEmail" name="Email" placeholder="you@example.com" required>
                 </div>
                 <span class="form-error" id="contactEmailError"></span>
               </div>
               <div class="form-group">
-                <label for="contactPhone">Phone Number <span class="form-hint">(optional)</span></label>
+                <label for="contactPhone">
+                  Phone Number
+                  <span class="form-hint">(optional)</span>
+                </label>
                 <div class="input-icon-wrapper">
                   <i class="fas fa-phone"></i>
-                  <input type="tel" id="contactPhone" placeholder="07XXX XXXXXX">
+                  <input type="tel" id="contactPhone" name="Phone" placeholder="07XXX XXXXXX">
                 </div>
               </div>
             </div>
 
-            <!-- School field (conditional) -->
+            <!-- School Field (conditional) -->
             <div class="form-group conditional-field" id="schoolField" style="display: none;">
-              <label for="contactSchool">School Name <span class="form-hint">(if applicable)</span></label>
+              <label for="contactSchool">
+                School Name
+                <span class="form-hint">(if applicable)</span>
+              </label>
               <div class="input-icon-wrapper">
                 <i class="fas fa-school"></i>
-                <input type="text" id="contactSchool" placeholder="Your child's school name">
+                <input type="text" id="contactSchool" name="School Name" placeholder="Your child's school name">
               </div>
             </div>
 
-            <!-- Organisation field (conditional) -->
+            <!-- Organisation Field (conditional) -->
             <div class="form-group conditional-field" id="orgField" style="display: none;">
-              <label for="contactOrg">Organisation / Company <span class="required">*</span></label>
+              <label for="contactOrg">
+                Organisation / Company
+                <span class="required">*</span>
+              </label>
               <div class="input-icon-wrapper">
                 <i class="fas fa-building"></i>
-                <input type="text" id="contactOrg" placeholder="Your organisation name">
+                <input type="text" id="contactOrg" name="Organisation" placeholder="Your organisation name">
               </div>
             </div>
 
             <!-- Subject -->
             <div class="form-group">
-              <label for="contactSubject">Subject <span class="required">*</span></label>
-              <input type="text" id="contactSubject" placeholder="Brief subject of your message" required>
+              <label for="contactSubject">
+                Subject <span class="required">*</span>
+              </label>
+              <input type="text" id="contactSubject" name="Subject" placeholder="Brief subject of your message"
+                required>
               <span class="form-error" id="contactSubjectError"></span>
             </div>
 
             <!-- Message -->
             <div class="form-group">
-              <label for="contactMessage">Your Message <span class="required">*</span></label>
-              <textarea id="contactMessage" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+              <label for="contactMessage">
+                Your Message <span class="required">*</span>
+              </label>
+              <textarea id="contactMessage" name="Message" rows="6" placeholder="Tell us how we can help you..."
+                required></textarea>
               <div class="textarea-footer">
                 <span class="form-error" id="contactMessageError"></span>
-                <span class="char-count"><span id="charCount">0</span>/2000</span>
+                <span class="char-count">
+                  <span id="charCount">0</span>/2000
+                </span>
               </div>
             </div>
 
-            <!-- How did you hear about us -->
+            <!-- How Did You Hear -->
             <div class="form-group">
-              <label for="hearAbout">How did you hear about us? <span class="form-hint">(optional)</span></label>
-              <select id="hearAbout">
+              <label for="hearAbout">
+                How did you hear about us?
+                <span class="form-hint">(optional)</span>
+              </label>
+              <select id="hearAbout" name="How They Found Us">
                 <option value="" disabled selected>Select an option</option>
                 <option value="google">Google Search</option>
                 <option value="social-media">Social Media</option>
@@ -224,10 +269,10 @@
               </select>
             </div>
 
-            <!-- Newsletter opt-in -->
+            <!-- Newsletter Opt-in -->
             <div class="form-group">
               <label class="checkbox-option compact">
-                <input type="checkbox" id="newsletterOptIn" checked>
+                <input type="checkbox" id="newsletterOptIn" name="Newsletter Opt-In" value="Yes" checked>
                 <span class="checkbox-custom"></span>
                 <span class="checkbox-label">
                   Keep me updated with STEM Dorado news, events and resources
@@ -239,12 +284,13 @@
             <div class="privacy-notice">
               <i class="fas fa-lock"></i>
               <p>
-                Your data is safe with us. We'll only use your information to respond to your enquiry 
-                and won't share it with third parties. Read our <a href="#">Privacy Policy</a>.
+                Your data is safe with us. We'll only use your information
+                to respond to your enquiry and won't share it with third
+                parties. Read our <a href="#">Privacy Policy</a>.
               </p>
             </div>
 
-            <!-- Submit -->
+            <!-- Submit Button -->
             <button type="submit" class="btn btn-primary btn-lg btn-submit-contact" id="contactSubmitBtn">
               <span class="btn-text">
                 <i class="fas fa-paper-plane"></i>
@@ -255,37 +301,60 @@
                 Sending...
               </span>
             </button>
+
           </form>
 
-          <!-- Success Message -->
-          <div class="form-success" id="formSuccess" style="display: none;">
-            <div class="success-icon-small">
-              <i class="fas fa-check-circle"></i>
+          <!-- ===== SUCCESS MESSAGE (same area) ===== -->
+          <div class="form-success" id="formSuccess">
+            <div class="success-animation">
+              <div class="success-circle">
+                <i class="fas fa-check"></i>
+              </div>
             </div>
             <h3>Message Sent Successfully!</h3>
-            <p>Thank you for reaching out. We'll get back to you within <strong>24 hours</strong>.</p>
-            <button class="btn btn-outline" id="sendAnotherBtn">
-              <i class="fas fa-plus"></i> Send Another Message
+            <p>
+              Thank you for reaching out to STEM Dorado. We'll get back
+              to you within <strong>24 hours</strong>. Keep an eye on
+              your inbox!
+            </p>
+            <div class="success-details">
+              <div class="success-detail-item">
+                <i class="fas fa-clock"></i>
+                <span>Response within 24 hours</span>
+              </div>
+              <div class="success-detail-item">
+                <i class="fas fa-envelope"></i>
+                <span>Check your spam folder too</span>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-send-another" id="sendAnotherBtn">
+              <i class="fas fa-plus"></i>
+              Send Another Message
             </button>
+            <a href="index.html" class="btn-back-home">
+              <i class="fas fa-home"></i>
+              Back to Home
+            </a>
           </div>
+
         </div>
 
         <!-- ===== SIDEBAR ===== -->
         <aside class="contact-sidebar">
+
           <!-- Meet the Team Card -->
           <div class="sidebar-card team-card-mini">
             <div class="team-mini-header">
-              <img src="https://ui-avatars.com/api/?name=Alina+C&size=80&background=0077b6&color=fff&bold=true" 
-                   alt="Dr Alina Chakraborty"
-                   onerror="this.src='https://ui-avatars.com/api/?name=AC&size=80&background=0077b6&color=fff'">
+              <img src="images/Founder image.png" alt="Dr Alina Chakraborty"
+                onerror="this.src='https://ui-avatars.com/api/?name=AC&size=80&background=0077b6&color=fff'">
               <div>
                 <h3>Dr Alina Chakraborty</h3>
                 <p>Founder, STEM Dorado</p>
               </div>
             </div>
             <p class="team-mini-text">
-              "I personally read every message. Whether you're a parent, teacher, or potential 
-              partner — I'd love to hear from you!"
+              "I personally read every message. Whether you're a parent,
+              teacher, or potential partner — I'd love to hear from you!"
             </p>
             <a href="about.html" class="sidebar-link">
               Meet the Team <i class="fas fa-arrow-right"></i>
@@ -298,32 +367,40 @@
               <i class="fas fa-bolt"></i> Quick Links
             </h3>
             <div class="quick-links-list">
-              <a href="booking.html" class="quick-link-item">
-                <div class="qli-icon"><i class="fas fa-calendar-check"></i></div>
+              <a href="careers.html" class="quick-link-item">
+                <div class="qli-icon">
+                  <i class="fas fa-calendar-check"></i>
+                </div>
                 <div>
                   <strong>Book a Club Place</strong>
                   <span>Summer Term 2026 open</span>
                 </div>
                 <i class="fas fa-arrow-right qli-arrow"></i>
               </a>
-              <a href="magazine.html#subscribe" class="quick-link-item">
-                <div class="qli-icon"><i class="fas fa-book"></i></div>
+              <a href="index.html#programs" class="quick-link-item">
+                <div class="qli-icon">
+                  <i class="fas fa-book"></i>
+                </div>
                 <div>
                   <strong>Subscribe to Magazine</strong>
                   <span>Free digital edition</span>
                 </div>
                 <i class="fas fa-arrow-right qli-arrow"></i>
               </a>
-              <a href="index.html#register" class="quick-link-item">
-                <div class="qli-icon"><i class="fas fa-user-plus"></i></div>
+              <a href="index.html#programs" class="quick-link-item">
+                <div class="qli-icon">
+                  <i class="fas fa-user-plus"></i>
+                </div>
                 <div>
                   <strong>Free Membership</strong>
                   <span>Weekly activities & more</span>
                 </div>
                 <i class="fas fa-arrow-right qli-arrow"></i>
               </a>
-              <a href="news.html#careers" class="quick-link-item">
-                <div class="qli-icon"><i class="fas fa-briefcase"></i></div>
+              <a href="careers.html" class="quick-link-item">
+                <div class="qli-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
                 <div>
                   <strong>Careers</strong>
                   <span>Join our team</span>
@@ -362,10 +439,12 @@
               </div>
             </div>
           </div>
+
         </aside>
       </div>
     </div>
   </section>
+  
 
   <!-- ===================== FAQ SECTION ===================== -->
   <section class="contact-faq">
@@ -383,7 +462,8 @@
               <i class="fas fa-school"></i>
               How do I book a place at an after-school club?
             </summary>
-            <p>Visit our <a href="booking.html">booking page</a>, select your child's school, and fill out the registration form. Bookings are on a first-come, first-served basis.</p>
+            <p>Visit our <a href="booking.html">booking page</a>, select your child's school, and fill out the
+              registration form. Bookings are on a first-come, first-served basis.</p>
           </details>
 
           <details class="faq-detail">
@@ -391,7 +471,8 @@
               <i class="fas fa-pound-sign"></i>
               What are the costs?
             </summary>
-            <p>After-school club sessions are £15 per session, with term packages available. The science magazine digital edition is free. Print subscriptions are £24/year.</p>
+            <p>After-school club sessions are £15 per session, with term packages available. The science magazine
+              digital edition is free. Print subscriptions are £24/year.</p>
           </details>
 
           <details class="faq-detail">
@@ -399,7 +480,8 @@
               <i class="fas fa-book"></i>
               How do I subscribe to the magazine?
             </summary>
-            <p>Visit our <a href="magazine.html#subscribe">magazine page</a> and choose between our free digital subscription or £24/year print + digital option.</p>
+            <p>Visit our <a href="magazine.html#subscribe">magazine page</a> and choose between our free digital
+              subscription or £24/year print + digital option.</p>
           </details>
         </div>
 
@@ -409,7 +491,8 @@
               <i class="fas fa-birthday-cake"></i>
               Do you do science birthday parties?
             </summary>
-            <p>Yes! We offer themed science birthday parties with experiments, lab coats, and certificates. Contact us via the form above selecting "Science Birthday Parties" for details.</p>
+            <p>Yes! We offer themed science birthday parties with experiments, lab coats, and certificates. Contact us
+              via the form above selecting "Science Birthday Parties" for details.</p>
           </details>
 
           <details class="faq-detail">
@@ -417,7 +500,8 @@
               <i class="fas fa-handshake"></i>
               How can my school partner with STEM Dorado?
             </summary>
-            <p>We'd love to hear from you! Select "Bring STEM Dorado to My School" in the form above, and we'll arrange a call to discuss how we can work together.</p>
+            <p>We'd love to hear from you! Select "Bring STEM Dorado to My School" in the form above, and we'll arrange
+              a call to discuss how we can work together.</p>
           </details>
 
           <details class="faq-detail">
@@ -425,7 +509,8 @@
               <i class="fas fa-user-plus"></i>
               Can I volunteer or work for STEM Dorado?
             </summary>
-            <p>We're always looking for passionate science educators. Check our <a href="news.html#careers">careers section</a> or select "Careers & Volunteering" in the contact form.</p>
+            <p>We're always looking for passionate science educators. Check our <a href="news.html#careers">careers
+                section</a> or select "Careers & Volunteering" in the contact form.</p>
           </details>
         </div>
       </div>
@@ -439,7 +524,7 @@
         <div class="map-info">
           <h3><i class="fas fa-map-marker-alt"></i> Our Area</h3>
           <p>
-            STEM Dorado operates across North London, serving schools in 
+            STEM Dorado operates across North London, serving schools in
             <strong>Barnet, Finchley, Hampstead Garden Suburb, and Mill Hill</strong>.
           </p>
           <div class="map-schools">
@@ -452,15 +537,10 @@
           </div>
         </div>
         <div class="map-embed">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39715.75856827535!2d-0.22!3d51.61!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876116e9e2834a1%3A0x46e3dfa0d6a1d93!2sBarnet%2C%20London!5e0!3m2!1sen!2suk!4v1710000000000!5m2!1sen!2suk" 
-            width="100%" 
-            height="100%" 
-            style="border:0; border-radius: var(--radius);" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            title="STEM Dorado operating area in North London">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39715.75856827535!2d-0.22!3d51.61!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876116e9e2834a1%3A0x46e3dfa0d6a1d93!2sBarnet%2C%20London!5e0!3m2!1sen!2suk!4v1710000000000!5m2!1sen!2suk"
+            width="100%" height="100%" style="border:0; border-radius: var(--radius);" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="STEM Dorado operating area in North London">
           </iframe>
         </div>
       </div>
@@ -470,8 +550,9 @@
   <!-- ===================== FOOTER ===================== -->
   <div id="footer-placeholder"></div>
 
-    <script src="js/components.js"></script>
+  <script src="js/components.js"></script>
   <script src="script.js"></script>
   <script src="contact.js"></script>
 </body>
+
 </html>

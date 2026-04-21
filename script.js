@@ -139,30 +139,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ===== 7. VIDEO PLAY BUTTON (placeholder) =====
-  const videoPlaceholder = document.getElementById('videoPlaceholder');
+const VIDEO_SRC = "https://video.wixstatic.com/video/247e4e_46ddbf612b3b431d89e419ae31e2bb6d/1080p/mp4/file.mp4";
 
-  if (videoPlaceholder) {
-    videoPlaceholder.addEventListener('click', () => {
-      // Replace with your actual video embed
-      // Example YouTube embed:
-      const videoContainer = videoPlaceholder.parentElement;
-      videoContainer.innerHTML = `
-        <iframe 
-          width="100%" 
-          height="100%" 
-          src="https://video.wixstatic.com/video/247e4e_46ddbf612b3b431d89e419ae31e2bb6d/1080p/mp4/file.mp4" 
-          title="STEM Dorado Video" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-        </iframe>
-      `;
-      videoContainer.style.position = 'relative';
-      videoContainer.style.paddingBottom = '56.25%';
-      videoContainer.style.height = '0';
-    });
-  }
+const playBtn          = document.getElementById('playBtn');
+const videoPlaceholder = document.getElementById('videoPlaceholder');
+const videoThumb       = document.getElementById('videoThumb');
+
+if (playBtn && videoThumb) {
+
+  // Click play button — start playing
+  playBtn.addEventListener('click', () => {
+    videoThumb.muted = false;        // unmute when user clicks
+    videoThumb.play();
+    videoPlaceholder.classList.add('playing');
+  });
+
+  // Click video while playing — pause/resume
+  videoThumb.addEventListener('click', () => {
+    if (videoThumb.paused) {
+      videoThumb.play();
+      videoPlaceholder.classList.add('playing');
+    } else {
+      videoThumb.pause();
+      videoPlaceholder.classList.remove('playing');
+    }
+  });
+
+  // When video ends — show play button again
+  videoThumb.addEventListener('ended', () => {
+    videoPlaceholder.classList.remove('playing');
+    videoThumb.currentTime = 0;
+  });
+
+}
 
   // ===== 8. STAGGERED REVEAL FOR GRIDS =====
   const staggerContainers = [
