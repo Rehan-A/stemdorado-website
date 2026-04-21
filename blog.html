@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | STEM Dorado — Science News & Insights</title>
+  <meta name="description" content="Read the latest science news, STEM tips, experiment ideas and educational insights from the STEM Dorado team.">
+  <link rel="canonical" href="https://www.stemdorado.com/blog.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blog | STEM Dorado">
+  <meta property="og:description" content="Weekly science articles, STEM tips and experiment ideas for children and parents.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- ===================== PAGE HERO ===================== -->
+  <section class="blog-hero">
+    <div class="blog-hero-bg"></div>
+    <div class="container blog-hero-content">
+      <div class="blog-hero-text">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Blog</span>
+        </nav>
+        <h1>Science Insights &amp; <span class="highlight">STEM Stories</span></h1>
+        <p>
+          Weekly articles, experiment ideas, science news and tips for parents 
+          and children — written by our team of scientists and educators.
+        </p>
+        <!-- Search Bar -->
+        <div class="blog-search">
+          <div class="blog-search-inner">
+            <i class="fas fa-search"></i>
+            <input 
+              type="text" 
+              id="blogSearch" 
+              placeholder="Search articles..." 
+              aria-label="Search blog articles">
+            <button id="blogSearchClear" class="search-clear" aria-label="Clear search">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blog-hero-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,80 C480,0 960,120 1440,40 L1440,120 L0,120 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===================== MAIN BLOG AREA ===================== -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-layout">
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="blog-main">
+
+          <!-- Category Filter -->
+          <div class="blog-filters">
+            <button class="blog-filter-btn active" data-filter="all">
+              All Posts
+            </button>
+            <button class="blog-filter-btn" data-filter="experiments">
+              <i class="fas fa-flask"></i> Experiments
+            </button>
+            <button class="blog-filter-btn" data-filter="science-news">
+              <i class="fas fa-newspaper"></i> Science News
+            </button>
+            <button class="blog-filter-btn" data-filter="tips">
+              <i class="fas fa-lightbulb"></i> Tips for Parents
+            </button>
+            <button class="blog-filter-btn" data-filter="stem-careers">
+              <i class="fas fa-graduation-cap"></i> STEM Careers
+            </button>
+          </div>
+
+          <!-- Search No Results -->
+          <div class="blog-no-results" id="blogNoResults">
+            <i class="fas fa-search"></i>
+            <h3>No articles found</h3>
+            <p>Try a different search term or browse by category.</p>
+          </div>
+
+          <!-- Blog Grid -->
+          <div class="blog-grid" id="blogGrid">
+            <!-- Injected by blog.js -->
+          </div>
+
+          <!-- Load More -->
+          <div class="blog-load-more" id="blogLoadMore">
+            <p class="blog-count" id="blogCount"></p>
+            <button class="btn-load-more" id="loadMoreBtn">
+              <i class="fas fa-arrow-down"></i>
+              Load More Articles
+            </button>
+          </div>
+
+        </main>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="blog-sidebar">
+
+          <!-- About Widget -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">About the Blog</h3>
+            <div class="sidebar-about">
+              <div class="sidebar-about-img">
+                <img src="images/Founder image.png" 
+                     alt="Dr Alina Chakraborty" loading="lazy">
+              </div>
+              <p>
+                Written by Dr Alina Chakraborty and the STEM Dorado team — 
+                scientists and educators passionate about inspiring children 
+                through the wonder of science.
+              </p>
+              <a href="about.html" class="sidebar-link">
+                Meet the team <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Categories Widget -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Categories</h3>
+            <ul class="sidebar-categories" id="sidebarCategories">
+              <li>
+                <button data-filter="all" class="sidebar-cat-btn active">
+                  <i class="fas fa-th"></i>
+                  <span>All Posts</span>
+                  <span class="cat-count" id="countAll">0</span>
+                </button>
+              </li>
+              <li>
+                <button data-filter="experiments" class="sidebar-cat-btn">
+                  <i class="fas fa-flask"></i>
+                  <span>Experiments</span>
+                  <span class="cat-count" id="countExperiments">0</span>
+                </button>
+              </li>
+              <li>
+                <button data-filter="science-news" class="sidebar-cat-btn">
+                  <i class="fas fa-newspaper"></i>
+                  <span>Science News</span>
+                  <span class="cat-count" id="countScienceNews">0</span>
+                </button>
+              </li>
+              <li>
+                <button data-filter="tips" class="sidebar-cat-btn">
+                  <i class="fas fa-lightbulb"></i>
+                  <span>Tips for Parents</span>
+                  <span class="cat-count" id="countTips">0</span>
+                </button>
+              </li>
+              <li>
+                <button data-filter="stem-careers" class="sidebar-cat-btn">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>STEM Careers</span>
+                  <span class="cat-count" id="countCareers">0</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Posts Widget -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Popular Posts</h3>
+            <div class="sidebar-popular" id="sidebarPopular">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+
+          <!-- Newsletter Widget -->
+          <div class="sidebar-widget newsletter-widget">
+            <div class="newsletter-icon">
+              <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <h3>Never Miss a Post</h3>
+            <p>Get our latest articles and science activities delivered to your inbox every week.</p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input 
+                type="email" 
+                placeholder="Your email address" 
+                required 
+                id="newsletterEmail"
+                aria-label="Email address for newsletter">
+              <button type="submit">
+                Subscribe <i class="fas fa-arrow-right"></i>
+              </button>
+            </form>
+            <p class="newsletter-note">
+              <i class="fas fa-lock"></i> No spam. Unsubscribe anytime.
+            </p>
+          </div>
+
+          <!-- Tags Widget -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Popular Tags</h3>
+            <div class="sidebar-tags">
+              <button class="tag-btn" data-tag="biology">Biology</button>
+              <button class="tag-btn" data-tag="chemistry">Chemistry</button>
+              <button class="tag-btn" data-tag="physics">Physics</button>
+              <button class="tag-btn" data-tag="coding">Coding</button>
+              <button class="tag-btn" data-tag="maths">Maths</button>
+              <button class="tag-btn" data-tag="space">Space</button>
+              <button class="tag-btn" data-tag="engineering">Engineering</button>
+              <button class="tag-btn" data-tag="environment">Environment</button>
+              <button class="tag-btn" data-tag="health">Health</button>
+              <button class="tag-btn" data-tag="robotics">Robotics</button>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA SECTION ===================== -->
+  <section class="blog-cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-content">
+          <h2>Want Science Activities Every Week?</h2>
+          <p>
+            Join Club STEM Dorado for free and receive weekly science and 
+            maths activities, plus our bi-monthly magazine — all completely free.
+          </p>
+          <div class="cta-buttons">
+            <a href="index.html#programs" class="btn btn-primary btn-lg">
+              Join for Free
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="about.html" class="btn btn-outline-white btn-lg">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <div class="cta-decoration">
+          <div class="cta-circle c1"></div>
+          <div class="cta-circle c2"></div>
+          <div class="cta-circle c3"></div>
+          <i class="fas fa-atom cta-atom"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <script src="js/components.js"></script>
+  <script src="script.js"></script>
+  <script src="blog.js"></script>
+</body>
+</html>
